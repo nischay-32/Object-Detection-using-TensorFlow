@@ -4,8 +4,6 @@ This repository contains a Python implementation of an object detection model bu
 
 The entire project is contained within a single Google Colab notebook, making it easy to run and reproduce.
 
-![Model Predictions on Validation Set](https://storage.googleapis.com/grounded-video-pipeline-prod/dc01d2d057a74a16b9b3240e5ebf860f/dc01d2d057a74a16b9b3240e5ebf860f_0.jpeg)
-*(Image: Sample output showing the model's predictions on the validation set. Green boxes indicate correct classifications, while red boxes indicate incorrect ones.)*
 
 ---
 
@@ -53,8 +51,6 @@ A custom CNN was built with a shared feature extraction base and two distinct ou
   - **Classification Head**: A `Dense` layer with a **Softmax** activation predicts the digit class (0-9).
   - **Localization Head**: A `Dense` layer with a linear activation function regresses the four bounding box coordinates.
 
-![Model Architecture Diagram](https://storage.googleapis.com/grounded-video-pipeline-prod/dc01d2d057a74a16b9b3240e5ebf860f/dc01d2d057a74a16b9b3240e5ebf860f_1.jpeg)
-*(Image: A simplified diagram of a multi-output model architecture.)*
 
 
 ### 3. Training and Evaluation
@@ -85,9 +81,6 @@ The model performs exceptionally well on the synthetic validation data.
 
 - **Classification Accuracy**: Achieved **~97.6%** accuracy on the validation set.
 - **Localization**: The predicted bounding boxes closely match the ground truth locations of the digits. Visual inspection shows that even when the classification is incorrect, the localization is often accurate.
-
-The training history plots for accuracy and loss are shown below:
-![Training History Plots](https://storage.googleapis.com/grounded-video-pipeline-prod/dc01d2d057a74a16b9b3240e5ebf860f/dc01d2d057a74a16b9b3240e5ebf860f_2.jpeg)
 
 ---
 
